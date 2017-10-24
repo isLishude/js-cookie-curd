@@ -4,16 +4,23 @@ a simple JavaScript Cookie Lib
 ## Useage
 
 ```js
-import {getCookies, getCookiesLen, setCookie, getCookie, removeCookie} from 'js-cookie-curd'
+import {
+    getCookies,
+    getCookiesLen,
+    setCookie,
+    getCookie,
+    removeCookie
+} from 'js-cookie-curd'
 
 // GET ALL COOKIES
 const cookies = getCookies()
 
-// GET COKIES SIZE
+// GET COKIES LENGTH
 const cookiesLength = getCookiesLen()
 
 // SET COOKIE,IF NOT SET YET WILL CREATE NEW ONE
-setCookie('key','value',new Date(2099,1,1).toGMTString())
+// eg.`key` will expire after 3 days.Default day param is 1
+setCookie('key','value',3)
 
 // GET COOKIE BY NAME,IF NO HAS,RETURN `undefined`
 getCookie('key')
