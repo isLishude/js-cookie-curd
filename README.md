@@ -20,3 +20,4 @@ getCookie('key')
 
 // REMOVE COOKIE
 removeCookie('key')
+```
