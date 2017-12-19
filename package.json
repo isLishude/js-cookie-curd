@@ -6,6 +6,10 @@
   "repository": "git@github.com:isLishude/js-cookie-curd.git",
   "author": "isLishude <lishude@aliyun.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "publish": "git push && git push --tags && npm publish"
+  },
   "devDependencies": {
     "typescript": "^2.6.2"
   }

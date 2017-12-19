@@ -18,15 +18,13 @@
         return true;
     };
     exports.getCookie = function (name) {
-        var reg = new RegExp('.' + name + '=([^;]*)([;|$])');
+        var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
         var match = document.cookie.match(reg);
         if (match)
-            return decodeURIComponent(match[1]);
+            return decodeURIComponent(match[2]);
         return null;
     };
     exports.removeCookie = function (name) {
-        var now = new Date().toUTCString();
-        document.cookie = name + "=;expires=" + now + ";";
-        return true;
+        return exports.setCookie(name, null, -1);
     };
 });

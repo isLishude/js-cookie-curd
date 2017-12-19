@@ -7,14 +7,12 @@ export const setCookie = function (name: string, value: any, days: number = 1): 
 }
 
 export const getCookie = function (name: string): string | null {
-    const reg: RegExp = new RegExp('.' + name + '=([^;]*)([;|$])')
+    const reg: RegExp = new RegExp("(^| )"+name+"=([^;]*)(;|$)")
     const match: string[] | null = document.cookie.match(reg)
-    if (match) return decodeURIComponent(match[1])
+    if (match) return decodeURIComponent(match[2])
     return null
 }
 
 export const removeCookie = function (name: string): boolean {
-    const now: String = new Date().toUTCString()
-    document.cookie = `${name}=;expires=${now};`
-    return true
+    return setCookie(name, null, -1)
 }
