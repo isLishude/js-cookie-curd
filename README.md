@@ -5,18 +5,10 @@ a simple JavaScript Cookie Lib
 
 ```js
 import {
-    getCookies,
-    getCookiesLen,
     setCookie,
     getCookie,
     removeCookie
 } from 'js-cookie-curd'
-
-// GET ALL COOKIES
-const cookies = getCookies()
-
-// GET COKIES LENGTH
-const cookiesLength = getCookiesLen()
 
 // SET COOKIE,IF NOT SET YET WILL CREATE NEW ONE
 // eg.`key` will expire after 3 days.Default day param is 1
