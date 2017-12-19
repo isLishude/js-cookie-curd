@@ -8,8 +8,11 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "publish": "git push && git push --tags && npm publish"
+    "prepublish": "git push && git push --tags"
   },
+  "files": [
+    "dist/index.js"
+  ],
   "devDependencies": {
     "typescript": "^2.6.2"
   }
